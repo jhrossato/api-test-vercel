@@ -1,4 +1,3 @@
-require('dotenv').config();
 //const odbc = require('odbc');
 const db = require("../database/db");
 

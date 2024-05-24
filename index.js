@@ -3,8 +3,10 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const produtoRouter = require('./routes/produto');
 
+require('dotenv').config();
+
 const app = express();
-const port = 3000
+//const port = 3000
 
 app.use(cors());
 
@@ -18,8 +20,8 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.listen(port, function () {
-  console.log(`Berlocaria API escutando na porta ${port}!`);
+app.listen(process.env.PORT, function () {
+  console.log(`Berlocaria API escutando na porta ${process.env.PORT}!`);
 });
 
 
