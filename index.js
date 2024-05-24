@@ -6,7 +6,7 @@ const produtoRouter = require('./routes/produto');
 require('dotenv').config();
 
 const app = express();
-//const port = 3000
+const port = process.env.PORT || 3000;
 
 app.use(cors());
 
@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.listen(process.env.PORT, function () {
+app.listen(port, "0.0.0.0", function () {
   console.log(`Berlocaria API escutando na porta ${process.env.PORT}!`);
 });
 
